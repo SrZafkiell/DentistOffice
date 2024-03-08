@@ -33,8 +33,11 @@ public class DentistOffice {
 		System.out.println("Normal: " + MailValidator.isMailValid("dalejandroceron@hotmail.com"));
 		System.out.println("Gmail: " + MailValidator.isMailValid("srzafkiell@gmail.com"));
 		System.out.println("No: " + MailValidator.isMailValid("not_a._G-*@mail.com"));
-		System.out.println(RoleConfig.getRoles());
 
+		PersonName personName = new PersonName("Nombre1","Nombre2","Apellido1","Apellido2");
+		System.out.println("Name: " + personName.getFirstName() + " " + personName.getMiddleName() + " " + personName.getFirstLastName() + " " + personName.getSecondLastName());
+
+		System.out.println(RoleConfig.getRoles());
 		for (Role role : RoleConfig.getRoles()){
 			System.out.println("NEW ROLE PRINT");
 			System.out.println("Role ID: " + role.getRoleId() + " | Role Name: " + role.getRoleName() + " | Role Desc: " +  role.getRoleDescription());

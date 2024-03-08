@@ -8,7 +8,8 @@ public class AgeCalculator {
 	 * Local date of the system
 	 * @see LocalDate
 	 */
-	private static final LocalDate today = LocalDate.now();
+	private static final LocalDate today = LocalDate.now(); // I'm not sure if this should be static and be here.
+	// Will review it later
 
 	/**
 	 * Simple function to calculate the age

@@ -14,5 +14,5 @@ public class Dentist extends Employee{
 	/**
 	 * Schedule of procedures for the dentist
 	 */
-	String scheduledProcedures;
+	String scheduledProcedures; // Resolve data type and implement
 }

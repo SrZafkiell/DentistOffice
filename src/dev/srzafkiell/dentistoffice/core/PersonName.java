@@ -25,9 +25,8 @@ public class PersonName {
 	 * @param secondLastName 	Second last name of the person (If applies, it can be an empty string)
 	 */
 	public PersonName(String firstName, String middleName, String firstLastName, String secondLastName) {
-		this.firstName = firstName;
+		this(firstName,firstLastName);
 		this.middleName = middleName;
-		this.firstLastName = firstLastName;
 		this.secondLastName = secondLastName;
 	}
 

@@ -84,22 +84,20 @@ public class Person {
 		this.phone = phone;
 	}
 
+	// Email, emergencyContact, insuranceInformation and preferredLanguage removed from the constructor.
+	// Later they will be available to be updated in a GUI
+	// The default language is set to "Spanish" by default.
 	/**
 	 * Complete constructor of a Person
 	 * @param name Name of the person
 	 * @param identification Identification of the person
 	 * @param birthDate Birth Date of the person -> Year/Month/Day
-	 * @param email Email of the person
 	 * @param phone Personal phone of the person
-	 * @param emergencyContact Emergency contact of the person
-	 * @param insuranceInformation Insurance information
-	 * @param preferredLanguage Preferred language for the system and messages
 	 */
 	public Person(PersonName name, String identification, LocalDate birthDate, long phone) {
-		this.name = name;
+		this(name,phone);
 		this.identification = identification;
 		this.birthDate = birthDate;
-		this.phone = phone;
 		this.email = ""; //
 		this.emergencyContact = null; // This emergency contact for a new account will not be set, this line has to be deleted. However, it is here to describe (for now)
 		this.country = ""; // This has to be automatic. Probably we will use a config file for this.
@@ -143,71 +141,80 @@ public class Person {
 
 	/**
 	 *
-	 * @return Age
+	 * @return Age of the person
 	 */
 	public int getAge() {
 		return age;
 	}
 
 	/**
-	 *
-	 * @param age
+	 * Establish the age of the person
+	 * @param age Age of the person
 	 */
 	public void setAge(int age) {
 		this.age = age;
 	}
 
 	/**
-	 *
-	 * @return
+	 * @return The role of the person
 	 */
 	public Role getRole() {
 		return role;
 	}
 
 	/**
-	 *
-	 * @param role
+	 * Sets the role for a person
+	 * @deprecated This function is due to be replaced by {@link dev.srzafkiell.dentistoffice.core.Person#updateRole} due to
+	 * its purpose.
+	 * New users will assign the Patient role as default, then is up to the administrator or person in charge
+	 * of the employees to update the role of each person in the system.
+	 * @param role Role to be set
 	 */
 	public void setRole(Role role) {
 		this.role = role;
 	}
 
 	/**
-	 *
-	 * @return
+	 * Updates the person's role to a new one
+	 * @param role Role to be assigned
+	 */
+	public void updateRole(Role role){
+
+	}
+
+	/**
+	 * @return Birthdate of the person (Year/Month/Day)
 	 */
 	public LocalDate getBirthDate() {
 		return birthDate;
 	}
 
 	/**
-	 *
-	 * @param birthDate
+	 * Set's the birthdate for the person
+	 * @deprecated This function is due to be eliminated completely, this should not even be considered. A person can only
+	 * have one birthdate, and it will not change, ever.
+	 * @param birthDate Birthdate of the person (Year/Month/Day)
 	 */
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
 	/**
-	 *
-	 * @return
+	 * @return Email of the person, it can be empty
 	 */
 	public String getEmail() {
 		return email;
 	}
 
 	/**
-	 *
-	 * @param email
+	 * @param email Email of the person
 	 */
 	public void setEmail(String email) {
 		this.email = email;
 	}
 
 	/**
-	 *
-	 * @return
+	 * @return Phone of the person
 	 */
 	public long getPhone() {
 		return phone;
