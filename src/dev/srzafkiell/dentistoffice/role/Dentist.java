@@ -14,5 +14,14 @@ public class Dentist extends Employee{
 	/**
 	 * Schedule of procedures for the dentist
 	 */
-	String scheduledProcedures; // Resolve data type and implement
+	String scheduledProcedures; // Resolve a data type and implement
+
+	@Override
+	public String toString() {
+		return "Dentist{" +
+				"proceduresPerformed=" + proceduresPerformed +
+				", compensationRates=" + compensationRates +
+				", scheduledProcedures='" + scheduledProcedures + '\'' +
+				'}';
+	}
 }

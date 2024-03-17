@@ -295,4 +295,21 @@ public class Person {
 	public void updateIdentification(){
 
 	}
+
+	@Override
+	public String toString() {
+		return "Person{" +
+				"name=" + name +
+				", identification='" + identification + '\'' +
+				", age=" + age +
+				", role=" + role +
+				", birthDate=" + birthDate +
+				", email='" + email + '\'' +
+				", phone=" + phone +
+				", emergencyContact=" + emergencyContact +
+				", country='" + country + '\'' +
+				", insuranceInformation='" + insuranceInformation + '\'' +
+				", preferredLanguage='" + preferredLanguage + '\'' +
+				'}';
+	}
 }
